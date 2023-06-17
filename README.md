@@ -14,7 +14,13 @@ microservices-in-python
 - Building the docker image using Dockerfile
     docker build -t webapp:1.0 .
     docker run -d -p 80:5000 --name web webapp:1.0
+    docker login
+    docker tag webapp:1.0 gauravkb/webapp:1.0
+    docker push gauravkb/webapp:1.0
+
 - Writing Docker Compose file
 - Writing Kubernetes Manifest files for the application
 - Creating Helm Chart
     help create webapp
+
+    
